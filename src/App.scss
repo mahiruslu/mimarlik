@@ -1,0 +1,252 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+body {
+  padding-bottom: 150px;
+  position: relative;
+}
+
+.app {
+  color: black;
+}
+
+.navBar {
+  height: 10vh;
+  color: blue;
+}
+
+#faIcon {
+  margin-right: 4px;
+}
+
+.navBarSocial {
+  span {
+    display: none;
+  }
+}
+
+.map-responsive {
+  padding-top: 5%;
+  overflow: hidden;
+  position: relative;
+  margin: auto;
+  width: 70%;
+  text-align: center;
+  .iframe {
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+  }
+}
+
+.services {
+  padding-top: 5%;
+  text-align: center;
+  color: black;
+  font-size: larger bold;
+  height: 100vh;
+  width: 100vw;
+  .cards {
+    width: 100%;
+    padding-bottom: 100px;
+  }
+  .card {
+    /* Add shadows to create the "card" effect */
+    box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.8);
+    transition: 0.3s;
+    width: 50%;
+    height: 40%;
+    display: inline-block;
+    padding: 25px;
+    margin: 10px;
+  }
+
+  /* On mouse-over, add a deeper shadow */
+  .card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  /* Add some padding inside the card container */
+  .container {
+    padding: 2px 16px;
+  }
+}
+
+.ContactForm {
+  padding-top: 5%;
+  float: right;
+  width: 50%;
+  .formRow {
+    margin-top: 5px;
+  }
+  p {
+    text-align: center;
+  }
+  input {
+    width: 600px;
+  }
+  textarea {
+    height: 10em;
+    width: 600px;
+  }
+  button {
+    margin-top: 5px;
+  }
+}
+.errorMessage {
+  color: red;
+}
+.contactMessage {
+  color: cornflowerblue;
+  text-transform: uppercase;
+  text-decoration: bold;
+}
+.ContactInfo {
+  padding-top: 5%;
+  float: left;
+  width: 50%;
+  text-align: center;
+
+  a {
+    margin-top: 5px;
+  }
+}
+
+.footer {
+  margin-top: 1rem;
+  padding: 1rem 1rem 0 1rem;
+  background-color: transparent;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  .footerRight {
+    width: 50%;
+    float: right;
+    text-align: right;
+    align-content: flex-end;
+    a {
+      font-size: smaller;
+      margin: 5px;
+    }
+    span {
+      color: red;
+    }
+  }
+  .footerLeft {
+    width: 50%;
+    float: left;
+    text-align: left;
+    a {
+      margin: 5px;
+    }
+  }
+}
+
+@media screen and (max-width: 793px) {
+  .navBarSocial {
+    span {
+      display: inline-block;
+      padding-left: 3px;
+    }
+  }
+  .services {
+    padding-top: 10vh;
+    padding-bottom: 100px;
+  }
+  .mainContact {
+    display: grid;
+    padding-top: 10vh;
+    text-align: center;
+    width: 100%;
+  }
+  .map-responsive {
+    padding-top: 10%;
+  }
+
+  .ContactForm {
+    padding-top: 5%;
+    text-align: center;
+    align-items: center;
+    width: 100%;
+    #contact-form {
+      width: 80%;
+    }
+    form {
+      display: inline-block;
+    }
+    .formRow {
+      margin-top: 5px;
+    }
+    input {
+      text-align: center;
+      width: 100%;
+    }
+    textarea {
+      text-align: center;
+      height: 10em;
+      width: 100%;
+    }
+    button {
+      margin-top: 5px;
+    }
+  }
+  .ContactInfo {
+    padding-top: 5%;
+    width: auto;
+    text-align: center;
+
+    a {
+      margin-top: 5px;
+    }
+  }
+  .footer {
+    position: absolute;
+    padding: 0;
+    background-color: lightgray;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    font-size: small;
+    text-align: center;
+    align-items: center;
+    margin-bottom: 0px;
+    display: grid;
+    justify-content: center;
+
+    .footerRight {
+      display: grid;
+      text-align: center;
+      align-content: center;
+      margin: 0;
+      width: 100%;
+      font-size: small;
+      text-align: center;
+      align-items: center;
+      flex: content;
+      a {
+        font-size: 0.6rem;
+        margin: 5px;
+      }
+      span {
+        color: red;
+      }
+    }
+    .footerLeft {
+      display: grid;
+      width: 100%;
+      font-size: 15px;
+      text-align: center;
+      align-content: center;
+      a {
+        font-size: 0.8rem;
+        margin: 5px;
+      }
+    }
+  }
+}
