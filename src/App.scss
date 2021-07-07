@@ -2,7 +2,8 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: "Roboto", sans-serif;
+  // font-family: "Roboto", sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
 }
 body {
   padding-bottom: 150px;
@@ -17,6 +18,27 @@ body {
   height: 10vh;
   color: blue;
 }
+nav .navbar-collapse {
+  position: fixed;
+  top: 60px;
+  background: rgba(26, 24, 24, 1);
+  right: -100%;
+  width: 100%;
+  height: 100vh;
+  display: inline-block;
+  transition: right 0.3s ease-in-out;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: larger;
+  font-weight: bold;
+}
+.color-nav {
+  background-color: rgb(26, 24, 24);
+}
+nav .navbar-collapse.show {
+  right: 0;
+}
 
 #faIcon {
   margin-right: 4px;
@@ -24,7 +46,7 @@ body {
 
 .navBarSocial {
   span {
-    display: none;
+    // display: none;
   }
 }
 
@@ -105,18 +127,28 @@ body {
   color: cornflowerblue;
   text-transform: uppercase;
   text-decoration: bold;
+  padding-bottom: 5px;
 }
 .ContactInfo {
   padding-top: 5%;
   float: left;
   width: 50%;
   text-align: center;
-
+  justify-content: center;
+  align-items: center;
+  .col {
+    padding-bottom: 5px;
+  }
   a {
     margin-top: 5px;
   }
 }
-
+.contactBottom {
+  position: flex;
+  height: 100px;
+  width: 100%;
+  padding-bottom: 0;
+}
 .footer {
   margin-top: 1rem;
   padding: 1rem 1rem 0 1rem;
@@ -161,12 +193,10 @@ body {
   }
   .mainContact {
     display: grid;
-    padding-top: 10vh;
+    padding-top: 5px;
     text-align: center;
     width: 100%;
-  }
-  .map-responsive {
-    padding-top: 10%;
+    margin-bottom: 10vh;
   }
 
   .ContactForm {
@@ -205,6 +235,7 @@ body {
       margin-top: 5px;
     }
   }
+
   .footer {
     position: absolute;
     padding: 0;
@@ -249,4 +280,16 @@ body {
       }
     }
   }
+}
+.modal-dialog {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+.modal-content {
+  height: 100%;
+  min-height: 100%;
+  height: auto;
+  border-radius: 0;
 }

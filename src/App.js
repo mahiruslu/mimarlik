@@ -13,22 +13,19 @@ function App() {
     <Router>
       <div className="App">
         <NavBar />
-        <div>
-          <Switch>
-            <Route exact path="/">
-              <Home />
-            </Route>
-            <Route path="/Services">
-              <Services />
-            </Route>
-            <Route path="/Contact">
-              <Contact />
-            </Route>
-          </Switch>
-        </div>
-        <Footer/>
+        <Switch>
+          <Route exact path="/">
+            <Home />
+          </Route>
+          <Route path="#myModal">
+            <Services />
+          </Route>
+          <Route path="/Contact">
+            <Contact />
+          </Route>
+        </Switch>
+        <Footer />
       </div>
-      
     </Router>
   );
 }

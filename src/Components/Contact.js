@@ -5,7 +5,12 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.min.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faWhatsapp, faInstagram } from "@fortawesome/free-brands-svg-icons";
-import { faPhone, faMailBulk } from "@fortawesome/free-solid-svg-icons";
+import {
+  faPhone,
+  faMailBulk,
+  faLocationArrow,
+} from "@fortawesome/free-solid-svg-icons";
+import { Button } from "@material-ui/core";
 
 function Contact() {
   const {
@@ -70,7 +75,7 @@ function Contact() {
     <div className="mainContact">
       <div className="map-responsive">
         <iframe
-          src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA3q7hmvxsGPH1O8zOvh634s7V0Zl00J64&q=Moda,Istanbul+Turkey"
+          src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA3q7hmvxsGPH1O8zOvh634s7V0Zl00J64&q=Ataşehir,Istanbul+Turkey"
           width="750"
           height="250"
           frameBorder="0"
@@ -83,7 +88,7 @@ function Contact() {
       </div>
 
       <div className="ContactInfo">
-        <div className="contactMessage">İletişim Bilgilerimiz ve Adresimiz</div>
+        <div className="contactMessage">İletişim Bilgilerimiz</div>
         <div className="col">
           <a href="tel:+90 505 296 12 23" className="btn btn-primary">
             <FontAwesomeIcon icon={faPhone} id="faIcon" />
@@ -111,6 +116,14 @@ function Contact() {
             info@okamimarlik.com
           </a>
         </div>
+        <div className="contactMessage">Adresimiz</div>
+        <div className="col">
+          <p>
+            <FontAwesomeIcon icon={faLocationArrow} id="faIcon" />
+            Ataşehir/İSTANBUL
+          </p>
+        </div>
+        <div className="contactBottom"></div>
       </div>
 
       <div className="ContactForm">
@@ -131,7 +144,7 @@ function Contact() {
                   },
                 })}
                 className="form-control formInput"
-                placeholder="İsiminiz"
+                placeholder="İsminiz"
               />
               {errors.name && (
                 <span className="errorMessage">{errors.name.message}</span>
@@ -198,10 +211,11 @@ function Contact() {
               )}
             </div>
           </div>
-          <button className="btn btn-success" type="submit">
+          <Button variant="outlined" color="primary" type="submit">
             Gönder
-          </button>
+          </Button>
         </form>
+        <div className="contactBottom"></div>
       </div>
       <ToastContainer />
     </div>

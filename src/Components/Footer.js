@@ -1,17 +1,7 @@
 import React from "react";
-import logo from "../Images/apple.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faInstagram } from "@fortawesome/free-brands-svg-icons";
-import { faPhone, faMailBulk } from "@fortawesome/free-solid-svg-icons";
-import {
-  Navbar,
-  Nav,
-  NavDropdown,
-  Form,
-  FormControl,
-  Button,
-  ModalFooter,
-} from "react-bootstrap";
+import { faMailBulk } from "@fortawesome/free-solid-svg-icons";
 
 function Footer() {
   return (
@@ -31,13 +21,10 @@ function Footer() {
         </a>
       </div>
       <div className="footerRight">
-        <a
-          href="https://mahiruslu.github.io/"
-          target="blank"
-          className="btn btn-dark"
-        >
+        <a href="/" target="blank" className="btn btn-dark">
           {" "}
-          This site made by <span>Mahir</span>
+          {/* This site made by <span>Mahir</span> */}
+          ©2021, All Rights Reserved. <span>Oka Mimarlık</span>
         </a>
       </div>
     </div>
